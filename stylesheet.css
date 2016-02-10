@@ -7,24 +7,39 @@ body {
     padding: 15px;
     margin: 0 auto; /* Centering body */
     height:100%;
+    color: grey;
 }
 
 *{
 	margin: 0;
 }
 
-header {
-    background-color: yellow;
-}
-
-h1 a:active, a:visited, a:hover, a:link {
+a:active, a:visited, a:link {
+	color: inherit;
     decoration: none;
     text-decoration: none;
+}
+
+a:hover {
+	color: pink;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    background-color: yellow;
 }
 
 h1 {
     padding: 15px 10px 0 15px;
     background-color: orange;
+}
+
+h1 a:hover {
+	color: inherit;
 }
 
 nav, footer {
