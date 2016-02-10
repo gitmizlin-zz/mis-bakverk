@@ -1,0 +1,87 @@
+body {
+	background-image: url("img/linen.png");
+	background-repeat: repeat;
+    font-family: Verdana, Geneva, sans-serif;
+    position: relative;
+    width: 50%;
+    padding: 15px;
+    margin: 0 auto; /* Centering body */
+    height:100%;
+}
+
+*{
+	margin: 0;
+}
+
+header {
+    background-color: yellow;
+}
+
+h1 a:active, a:visited, a:hover, a:link {
+    decoration: none;
+    text-decoration: none;
+}
+
+h1 {
+    padding: 15px 10px 0 15px;
+    background-color: orange;
+}
+
+nav, footer {
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    text-align:center;
+    background-color: pink;
+    padding: 0;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    background-color: blue;
+    padding: 20px;
+}
+
+footer li {
+    list-style-type: none;
+    display: inline-block;
+    background-color: blue;
+}
+
+main {
+    background-color: green;
+    text-align: left;
+    padding: 20px;
+}
+
+ol {
+	margin: 15px 0;
+}
+
+figure  {
+    border:1px solid lightgrey;
+    background-color: orange;
+    float: right;
+    text-align: left;
+    padding: 10px;
+}
+
+figure dt {
+    font-weight: bold;
+    line-height: 100%;
+}
+
+figure dd {
+	margin: 0 0 10px 0;
+	text-indent: 20px;
+}
+
+lh {
+    display: block;
+}
+
+footer {
+    clear: both;
+    padding: 15px;
+}
