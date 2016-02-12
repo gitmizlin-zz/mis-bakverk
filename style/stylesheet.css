@@ -1,9 +1,9 @@
+
 body {
 	background-image: url("img/linen.png");
 	background-repeat: repeat;
     font-family: Verdana, Geneva, sans-serif;
     position: relative;
-    width: 50%;
     padding: 0;
     margin: 0 auto; /* Centering body */
     color: grey;
@@ -13,7 +13,6 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
 a:active, a:visited, a:link {
 	color: inherit;
     decoration: none;
@@ -21,25 +20,51 @@ a:active, a:visited, a:link {
 }
 
 a:hover {
-	color: pink;
-	-webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+	color: grey;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 header {
-    background-color: yellow;
+    background-color: pink;
 }
 
 h1 {
-    padding: 15px 10px 0 15px;
-    background-color: orange;
+    float: left;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    color: white;
+    font-weight: normal;
+    font-size: 200%;
+    font-family: "Courier New", Courier, monospace;
+    padding-left: 20%;
+    line-height: 200%;
 }
 
 h1 a:hover {
 	color: inherit;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20%;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    color: white;
+    padding: 20px 10px;
+    text-transform: uppercase;
+}
+
+nav li a:hover {
+    color: grey;
 }
 
 h2 {
@@ -53,25 +78,15 @@ nav, footer {
     text-align:center;
     background-color: pink;
     padding: 0;
+    border: none;
 }
 
-nav li {
-    list-style-type: none;
-    display: inline-block;
-    background-color: blue;
-    padding: 20px 10px;
-}
-
-footer li {
-    list-style-type: none;
-    display: inline-block;
-    background-color: blue;
-}
 
 main {
     text-align: left;
     padding: 20px;
-    background-color: white;
+    width: 60%;
+    margin: 0 auto;
 }
 
 img {
@@ -79,18 +94,22 @@ img {
 	height: 100%;
 }
 
-ol {
+#main_ol {
 	margin: 15px 0;
-	padding-left:0;
+	padding-left:40px;
+	line-height: 150%;
+}
+
+#main_ol li a:hover {
+    color: pink;
 }
 
 figure  {
     border:1px solid lightgrey;
-    background-color: orange;
     float: right;
     text-align: left;
     padding: 10px;
-	width: 50%;
+	width: 40%;
 	height: 50%;
 }
 
@@ -105,11 +124,29 @@ figure dd {
 	text-indent: 20px;
 }
 
-lh {
-    display: block;
+.step {
+    width: 300px;
+    margin: 10px;
+}
+
+#method {
+    display: flex;
+    flex-direction: colum;
+    align-items: flex-start;
+}
+
+#method li {
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 footer {
     clear: both;
     padding: 15px;
+    color: white;
+}
+
+footer li {
+    list-style-type: none;
+    display: inline-block;
 }

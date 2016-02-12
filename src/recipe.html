@@ -1,13 +1,28 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Information on a french dessert crème brûlée.">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="shortcut icon" href="img/fabicon.ico">
-    <title>Mis bakverk: Crème brûlée recipe</title>
+    <link rel="stylesheet" type="text/css" href="../style/stylesheet.css">
+    <link rel="shortcut icon" href="../img/fabicon.ico">
+    <title>Mis bakverk: Crème brûlée</title>
+
+    <!--[if lt IE 9]>
+    <script src="">
+    </script>
+    <!-- end if -->
 </head>
 <body>
+<header>
+    <h1><a href="index.html">mis<strong>b</strong>akverk</a></h1>
+    <nav>
+        <ul>
+            <li><a href="recipe.html">standard recipe</a></li>
+            <li><a href="">with fruits</a></li>
+            <li><a href="">with chokolate</a></li>
+        </ul>
+    </nav>
+</header>
 <main>
     <h2>Ingredients</h2>
     <ul>
@@ -17,37 +32,53 @@
         <li>heavy cream</li>
     </ul>
     <h2>Method</h2>
-    <ol>
+    <ol id="method">
         <li>
-            <img src="../img/recipe/recipe1.jpg" alt="recipe_step1">
+            <img class="step" src="../img/recipe/recipe1.jpg" alt="recipe_step1">
             <p>
-                some text bla bla bla.
-
+                Preheat the oven to 160 degrees C.
+                Place the cream, vanilla bean and its pulp into a medium saucepan set over medium-high heat and
+                bring to a boil. Remove from the heat, cover and allow to sit for 15 minutes. Remove the vanilla bean
+                and reserve for another use.
             </p>
         </li>
         <li>
-            <img src="../img/recipe/recipe2.jpg" alt="recipe_step1">
+            <img class="step" src="../img/recipe/recipe2.jpg" alt="recipe_step1">
             <p>
-                some text bla bla bla.
-
+                In a medium bowl, whisk together 1/2 cup sugar and the egg yolks until well blended and it just starts
+                to lighten in color. Add the cream a little at a time, stirring continually. Pour the liquid into
+                6 (7 to 8-ounce) ramekins.
             </p>
         </li>
         <li>
-            <img src="../img/recipe/recipe3.jpg" alt="recipe_step1">
+            <img class="step" src="../img/recipe/recipe3.jpg" alt="recipe_step1">
             <p>
-                some text bla bla bla.
-
+                Place the ramekins into a large cake pan or roasting pan. Pour enough hot water into the pan to
+                come halfway up the sides of the ramekins. Bake just until the creme brulee is set, but still trembling
+                in the center, approximately 40 to 45 minutes. Remove the ramekins from the roasting pan and refrigerate
+                for at least 2 hours and up to 3 days.
             </p>
         </li>
         <li>
-            <img src="../img/recipe/recipe4.jpg" alt="recipe_step1">
+            <img class="step" src="../img/recipe/recipe4.jpg" alt="recipe_step1">
             <p>
-                some text bla bla bla.
-
+                Remove the creme brulee from the refrigerator for at least 30 minutes prior to browning the sugar on top.
+                Divide the remaining 1/2 cup vanilla sugar equally among the 6 dishes and spread evenly on top. Using
+                a torch, melt the sugar and form a crispy top. Allow the creme brulee to sit for at least 5 minutes
+                before serving.
             </p>
         </li>
     </ol>
 </main>
+<footer>
+    <ul>
+        Validators:
+        <li><a href="https://validator.w3.org/">HTML</a></li>
+        <li><a href="https://jigsaw.w3.org/css-validator/">CSS</a></li>
+        <li><a href="http://esprima.org/demo/validate.html">JS/JQuery/Ajax</a></li>
 
+    </ul>
+</footer>
 </body>
 </html>
+
