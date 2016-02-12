@@ -1,8 +1,8 @@
 
 body {
-	background-image: url("img/linen.png");
-	background-repeat: repeat;
-    font-family: Verdana, Geneva, sans-serif;
+   	background-image: url("../img/linen.png");
+   	background-repeat: repeat;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     position: relative;
     padding: 0;
     margin: 0 auto; /* Centering body */
@@ -63,12 +63,12 @@ nav li {
     text-transform: uppercase;
 }
 
-nav li a:hover {
-    color: grey;
-}
-
 h2 {
 	padding-top: 20px;
+	color: pink;
+	font-family: Roboto;
+	font-weight: normal;
+	text-transform: uppercase;
 }
 
 nav, footer {
@@ -81,7 +81,6 @@ nav, footer {
     border: none;
 }
 
-
 main {
     text-align: left;
     padding: 20px;
@@ -91,6 +90,7 @@ main {
 
 #cb {
   color: pink;
+  font-family: Roboto;
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -118,6 +118,7 @@ figure  {
     padding: 10px;
 	width: 40%;
 	height: 50%;
+	background-color: white;
 }
 
 figure dt {
@@ -131,33 +132,50 @@ figure dd {
 	text-indent: 20px;
 }
 
+#img_source {
+    font-size: 12px;
+    text-align: right;
+}
+
+#img_source a:hover {
+    color: pink;
+}
+
 .step {
     width: 300px;
     margin: 10px;
 }
 
-#method {
+#method { /* ol */
     display: flex;
     flex-direction: colum;
     align-items: flex-start;
     counter-reset: item;
-    list-style-type: none;
-    margin-top: 20px;
+    list-style: none;
 }
 
 #method li {
     flex-grow: 1;
     flex-basis: 0;
     list-style-position:inside;
+    margin: 20px;
 }
 
 #method li:before {
     content: counter(item) "  ";
-    counter-increment: item
+    counter-increment: item;
+    color: #003300;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+#method img {
+    margin: 0;
 }
 
 #ingredients {
     margin: 10px;
+    line-height: 160%;
 }
 
 #ingredients li {
@@ -175,3 +193,15 @@ footer li {
     list-style-type: none;
     display: inline-block;
 }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.eot');
+    src: url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.woff') format('woff'),
+         url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.ttf') format('truetype'),
+         url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.svg#RobotoThin') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
