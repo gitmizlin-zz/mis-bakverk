@@ -176,11 +176,11 @@ figure dd {
 #ingredients {
     margin: 10px;
     line-height: 160%;
+    list-style-image: url("../img/recipe/check.png");
 }
 
 #ingredients li {
     list-style-position: inside;
-    list-style-image: url("../img/recipe/check.png");
 }
 
 footer {
