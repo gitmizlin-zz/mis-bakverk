@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Information on a french dessert crème brûlée.">
     <link rel="stylesheet" type="text/css" href="../style/stylesheet.css">
     <link rel="shortcut icon" href="../img/fabicon.ico">
+    <script type="text/javascript" src="script.js"></script>
     <title>Mis bakverk: Crème brûlée</title>
 
     <!--[if lt IE 9]>
@@ -19,22 +20,39 @@
         <ul>
             <li><a href="index.html">home</a></li>
             <li><a href="recipe.html">standard recipe</a></li>
-            <li><a href="">with fruits</a></li>
-            <li><a href="">with chokolate</a></li>
         </ul>
     </nav>
 </header>
 <main>
+
+    <figure>
+        <img src="../img/recipe/cb2.jpg" alt="crème brûlée">
+        <p class="img_source">Photo: Rise Cafe/
+            <a href="http://risecafe.ti-da.net/e2410832.html">Rise Cafe along Kumochi river</a></p>
+        <fieldset class="rating">
+            <legend>Rate crème brûlée</legend>
+            <input type="radio" id="star1" name="rating" value="1" oninput="rate()" /><label for="star1" title="Meh!"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda ok"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Yeah sure"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good"></label>
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Creme brûlée rocks!"></label>
+        </fieldset>
+        <p>Your rating: <span id="your_rating"></span></p>
+    </figure>
+    <h2>portions</h2>
+    <p id="select_a_portion">Select a portion </p>
+    <input id="quantity" type="range" min="1" max="8" step="1" value="4" oninput="changePortion()">
+    <p id="selectedPortion1"></p>
     <h2>Ingredients</h2>
-    <input type="number" id="quantity" min="1" max="8" onchange="changePortion()">
-     <!--<form type="range" id="quantity" min="1" max="8" step="1">kk</form>-->
+    <p id="selectedPortion2"></p>
     <ul id="ingredients">
-        <li>egg yolks</li>
-        <li>milk</li>
-        <li>sugar</li>
-        <li>heavy cream</li>
-        <li>vanilla pod</li>
+        <li id="egg_yolk"></li>
+        <li id="milk"></li>
+        <li id="sugar"></li>
+        <li id="heavy_cream"></li>
+        <li id="vanilla_pod"></li>
     </ul>
+
     <h2>Method</h2>
     <ol id="method">
         <li>
@@ -49,9 +67,9 @@
         <li>
             <img class="step" src="../img/recipe/recipe2.jpg" alt="recipe_step2">
             <p>
-                In a medium bowl, whisk together 1/2 cup sugar and the egg yolks until well blended and it just starts
-                to lighten in color. Add the cream a little at a time, stirring continually. Pour the liquid into
-                2-2.5 dl ramekins.
+                In a medium bowl, whisk together a half of the sugar and the egg yolks until well blended and it
+                just starts to lighten in color. Add the cream a little at a time, stirring continually. Pour the
+                liquid into 200-250 ml ramekins.
             </p>
         </li>
         <li>
@@ -67,7 +85,7 @@
             <img class="step" src="../img/recipe/recipe4.jpg" alt="recipe_step4">
             <p>
                 Remove the creme brulee from the refrigerator for at least 30 minutes prior to browning the sugar on top.
-                Divide the remaining 1/2 cup vanilla sugar equally among the 6 dishes and spread evenly on top. Using
+                Divide the remaining sugar equally among the dishes and spread evenly on top. Using
                 a torch, melt the sugar and form a crispy top. Allow the creme brulee to sit for at least 5 minutes
                 before serving.
             </p>
