@@ -164,13 +164,13 @@ legend {
 }
 
 input[type="radio"] {
-    display:none;
+
 	background: url(../img/star_grey.png) left center no-repeat;
 }
 
 #method { /* ol */
     display: flex;
-    flex-direction: column;
+    flex-direction: colum;
     align-items: flex-start;
     flex-wrap: wrap;
     counter-reset: item;
@@ -207,12 +207,13 @@ input[type="radio"] {
     list-style-position: inside;
 }
 
-#select_a_portion, #selectedPortion2 {
+#select_a_portion, #selectedPortion {
 	margin: 10px;
 }
 
-#selectedPortion1 {
-	margin: 10px 50px;
+#recipe_above {
+	display: inline-block;
+	width: 100%;
 }
 
 footer {
