@@ -64,11 +64,15 @@ nav li {
 }
 
 h2 {
-	padding-top: 20px;
 	color: pink;
 	font-family: Roboto;
 	font-weight: normal;
 	text-transform: uppercase;
+	font-weight: bold;
+}
+
+h3 {
+	margin-top: 20px;
 }
 
 nav, footer {
@@ -132,12 +136,12 @@ figure dd {
 	text-indent: 20px;
 }
 
-#img_source {
+.img_source {
     font-size: 12px;
     text-align: right;
 }
 
-#img_source a:hover {
+.img_source a:hover {
     color: pink;
 }
 
@@ -146,10 +150,29 @@ figure dd {
     margin: 10px;
 }
 
+fieldset {
+	border: 0;
+	margin-top: 20px;
+}
+
+legend {
+	margin-bottom: 10px;
+}
+
+.rating {
+	float: left;
+}
+
+input[type="radio"] {
+    display:none;
+	background: url(../img/star_grey.png) left center no-repeat;
+}
+
 #method { /* ol */
     display: flex;
-    flex-direction: colum;
+    flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
     counter-reset: item;
     list-style: none;
 }
@@ -171,16 +194,25 @@ figure dd {
 
 #method img {
     margin: 0;
+    padding-bottom: 20px;
 }
 
 #ingredients {
     margin: 10px;
-    line-height: 160%;
+    line-height: 200%;
     list-style-image: url("../img/recipe/check.png");
 }
 
 #ingredients li {
     list-style-position: inside;
+}
+
+#select_a_portion, #selectedPortion2 {
+	margin: 10px;
+}
+
+#selectedPortion1 {
+	margin: 10px 50px;
 }
 
 footer {
@@ -196,12 +228,11 @@ footer li {
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.eot');
-    src: url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.woff') format('woff'),
-         url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.ttf') format('truetype'),
-         url('../font/robotoslab_thin_macroman/RobotoSlab-Thin-webfont.svg#RobotoThin') format('svg');
+    src: url('../font/roboto_thin_macroman/Roboto-Thin-webfont.eot');
+    src: url('../font/roboto_thin_macroman/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto_thin_macroman/Roboto-Thin-webfont.woff') format('woff'),
+         url('../font/roboto_thin_macroman/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('../font/roboto_thin_macroman/Roboto-Thin-webfont.svg#RobotoThin') format('svg');
     font-weight: 200;
     font-style: normal;
 }
-
