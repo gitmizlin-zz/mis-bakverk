@@ -157,14 +157,19 @@ fieldset {
 
 legend {
 	margin-bottom: 10px;
+	font-weight: bold;
 }
 
 .rating {
 	float: left;
 }
 
-input[type="radio"] {
+.stars {
+	display: none;
+	background: url(../img/star_grey.png) left center no-repeat;
+}
 
+input ~ label {
 	background: url(../img/star_grey.png) left center no-repeat;
 }
 
