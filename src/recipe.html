@@ -1,17 +1,13 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Information on a french dessert crème brûlée.">
     <link rel="stylesheet" type="text/css" href="../style/stylesheet.css">
     <link rel="shortcut icon" href="../img/fabicon.ico">
+    <script src="jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <title>Mis bakverk: Crème brûlée</title>
-
-    <!--[if lt IE 9]>
-    <script src="">
-    </script>
-    <!-- end if -->
 </head>
 <body>
 <header>
@@ -19,32 +15,30 @@
     <nav>
         <ul>
             <li><a href="index.html">home</a></li>
-            <li><a href="recipe.html">standard recipe</a></li>
+            <li><a href="recipe.html">recipe</a></li>
         </ul>
     </nav>
 </header>
 <main>
-
-    <figure>
-        <img src="../img/recipe/cb2.jpg" alt="crème brûlée">
-        <p class="img_source">Photo: Rise Cafe/
-            <a href="http://risecafe.ti-da.net/e2410832.html">Rise Cafe along Kumochi river</a></p>
+    <section id="recipe_above">
+        <figure>
+            <img src="../img/recipe/cb2.jpg" alt="crème brûlée">
+            <p class="img_source">Photo: Rise Cafe/
+                <a href="http://risecafe.ti-da.net/e2410832.html">Rise Cafe along Kumochi river</a></p>
         <fieldset class="rating">
             <legend>Rate crème brûlée</legend>
-            <input type="radio" id="star1" name="rating" value="1" oninput="rate()" /><label for="star1" title="Meh!"></label>
-            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda ok"></label>
-            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Yeah sure"></label>
-            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good"></label>
-            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Creme brûlée rocks!"></label>
+            <input class="stars" type="radio" id="star1" name="rating" value="1" oninput="rate()" /><label for="star1" title="Meh!"></label>
+            <input class="stars" type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda ok"></label>
+            <input class="stars" type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Yeah sure"></label>
+            <input class="stars" type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good"></label>
+            <input class="stars" type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Creme brûlée rocks!"></label>
         </fieldset>
-        <p>Your rating: <span id="your_rating"></span></p>
-    </figure>
-    <h2>portions</h2>
+        </figure>
+
+    <h2>Ingredients</h2>
     <p id="select_a_portion">Select a portion </p>
     <input id="quantity" type="range" min="1" max="8" step="1" value="4" oninput="changePortion()">
-    <p id="selectedPortion1"></p>
-    <h2>Ingredients</h2>
-    <p id="selectedPortion2"></p>
+    <p id="selectedPortion"></p>
     <ul id="ingredients">
         <li id="egg_yolk"></li>
         <li id="milk"></li>
@@ -52,7 +46,7 @@
         <li id="heavy_cream"></li>
         <li id="vanilla_pod"></li>
     </ul>
-
+    </section>
     <h2>Method</h2>
     <ol id="method">
         <li>
@@ -101,6 +95,7 @@
 
     </ul>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
 
