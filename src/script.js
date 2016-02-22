@@ -53,32 +53,36 @@ function vanilla() {
 }
 
 $('.ratingForm input').on('change', function() {
-	var value = ($('input[name=rating]:checked', '.ratingForm').val());
-	console.log(value);
+	var userValue;
+	userValue = ($('input[name=rating]:checked', '.ratingForm').val());
+	$('label[for=' + userValue + ']').css('position', "relative");
+	$('label[for=' + userValue + ']').css('top', "2px");
+	$('label[for=' + userValue + ']').css('right', "2px");
+	$(':radio:not(:checked)').attr('disabled', true);
+	$('#myRating').text(userValue);
+	return userValue;
 });
 
-
-
 $('.ratingForm label').hover(function() {
-	var	value = ($('input[name=rating]:hover', '.ratingForm').val());
-	console.log("hovered");
-	var i = 0;
-	$('label[for=star' + value + ']').css('position', "relative");
-//	$('label[for=star' + value + ']').css('left', "20px");
-	$('label[for=star' + value + ']').css('bottom', "20px");
+		var	value = ($('input[name=rating]:hover', '.ratingForm').val());
+		var i = 0;
+		console.log("hovered");
+		var f = $(this).attr("for");
+		$('label[for=' + f + ']').css('position', "relative");
+		$('label[for=' + f + ']').css('bottom', "2px");
+		$('label[for=' + f + ']').css('left', "2px");
 
-	while (i <= value) {
-		$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
-		i++;
-	}
+		while (i <= value) {
+			$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
+			i++;
+		}
 
 }, function() {
 	$('.ratingForm label').css('backgroundImage', "url('../img/star_grey.png')");
-	$('.ratingForm label').css('position', "relative");
-//	$('label[for=star' + value + ']').css('right', "20px");
     console.log("not hovered" + $(this).attr("for"));
-//	globalTest = this;
-
+    var f = $(this).attr("for");
+	$('label[for=' + f + ']').css('position', "relative");
+	$('label[for=' + f + ']').css('top', "2px");
+	$('label[for=' + f + ']').css('right', "2px");
 });
-
 
