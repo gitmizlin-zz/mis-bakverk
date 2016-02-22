@@ -52,5 +52,25 @@ function vanilla() {
 	document.getElementById("vanilla_pod").innerHTML = portions + " " + text;
 }
 
-//$(".stars").hide();
+$('.ratingForm input').on('change', function() {
+	var value = ($('input[name=rating]:checked', '.ratingForm').val());
+	console.log(value);
+});
+
+
+$('.ratingForm label').hover(function() {
+	var value = ($('input[name=rating]:hover', '.ratingForm').val());
+	console.log(value);
+	var i = 0;
+	$(this).css('position', "relative");
+	$(this).css('left', "2px");
+	$(this).css('bottom', "2px");
+	while (i <= value) {
+		$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
+		i++;
+	}
+
+}, function() {
+	$('.ratingForm label').css('backgroundImage', "url('../img/star_grey.png')");
+});
 

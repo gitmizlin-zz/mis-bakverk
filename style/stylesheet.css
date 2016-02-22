@@ -150,27 +150,18 @@ figure dd {
     margin: 10px;
 }
 
-fieldset {
-	border: 0;
-	margin-top: 20px;
-}
 
-legend {
-	margin-bottom: 10px;
-	font-weight: bold;
-}
-
-.rating {
-	float: left;
+input[type=radio] + label {
+    display:inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(../img/star_grey.png) left center no-repeat;
 }
 
 .stars {
 	display: none;
-	background: url(../img/star_grey.png) left center no-repeat;
-}
-
-input ~ label {
-	background: url(../img/star_grey.png) left center no-repeat;
+	background: url(../img/star_pink.png) left center no-repeat;
+	float: left;
 }
 
 #method { /* ol */
