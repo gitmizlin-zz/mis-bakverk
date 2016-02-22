@@ -51,6 +51,21 @@ function vanilla() {
 	}
 	document.getElementById("vanilla_pod").innerHTML = portions + " " + text;
 }
+//$('#getDataButton').click(function() {
+//    // Kod som körs när man klickar på knappen
+//    $.ajax({
+//        method: "GET",
+//        url: "http://opendata-download-metfcst.smhi.se/api/category/pmp1.5g/version/1/geopoint/lat/58.59/lon/16.18/data.json",
+//        success: function(data) {
+//            // JSON.stringify(data) gör om JavaScript objekt till en sträng
+//            // Den första temperaturen på första dagen ges med
+//            // data["timeseries"][0]["t"]
+//            // data.timeseries[0].t
+//            $('#temperature').text(data.timeseries[0].t);
+//
+//
+//        },
+//    });
 
 $('.ratingForm input').on('change', function() {
 	var userValue;
