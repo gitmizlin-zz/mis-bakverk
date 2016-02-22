@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9786242d-ec0d-4f80-a86a-2448039f0c91" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/recipe.html" afterPath="$PROJECT_DIR$/src/recipe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/script.js" afterPath="$PROJECT_DIR$/src/script.js" />
     </list>
     <ignored path="html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -633,7 +631,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456150007242</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="working with ajax">
+      <created>1456151707351</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1456151707351</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -690,7 +694,8 @@
     <MESSAGE value="star rating not working" />
     <MESSAGE value="star rating   working" />
     <MESSAGE value="allt funkar. rating sparad i variabel" />
-    <option name="LAST_COMMIT_MESSAGE" value="allt funkar. rating sparad i variabel" />
+    <MESSAGE value="working with ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="working with ajax" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
