@@ -162,6 +162,15 @@ input[type=radio] + label {
 	display: none;
 }
 
+.ratingForm {
+	margin-bottom: 10px;
+}
+
+#myRating {
+	font-size: 30px;
+	color: green;
+}
+
 #method { /* ol */
     display: flex;
     flex-direction: colum;
