@@ -67,6 +67,22 @@ function vanilla() {
 //        },
 //    });
 
+$('.ratingForm input').click(function() {
+	console.log("clicked");
+	$.ajax({
+		method: "GET",
+		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee",
+		sucsess: function(data) {
+			console.log(JSON.stringify(data));
+			$('#votes').text(data.votes);
+			$('#average').text(data.rating);
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+          console.log(textStatus, errorThrown);
+        }
+	})
+});
+
 $('.ratingForm input').on('change', function() {
 	var userValue;
 	userValue = ($('input[name=rating]:checked', '.ratingForm').val());
