@@ -58,13 +58,15 @@ $('.ratingForm input').on('change', function() {
 });
 
 
+
 $('.ratingForm label').hover(function() {
-	var value = ($('input[name=rating]:hover', '.ratingForm').val());
-	console.log(value);
+	var	value = ($('input[name=rating]:hover', '.ratingForm').val());
+	console.log("hovered");
 	var i = 0;
-	$(this).css('position', "relative");
-	$(this).css('left', "2px");
-	$(this).css('bottom', "2px");
+	$('label[for=star' + value + ']').css('position', "relative");
+//	$('label[for=star' + value + ']').css('left', "20px");
+	$('label[for=star' + value + ']').css('bottom', "20px");
+
 	while (i <= value) {
 		$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
 		i++;
@@ -72,5 +74,11 @@ $('.ratingForm label').hover(function() {
 
 }, function() {
 	$('.ratingForm label').css('backgroundImage', "url('../img/star_grey.png')");
+	$('.ratingForm label').css('position', "relative");
+//	$('label[for=star' + value + ']').css('right', "20px");
+    console.log("not hovered" + $(this).attr("for"));
+//	globalTest = this;
+
 });
+
 

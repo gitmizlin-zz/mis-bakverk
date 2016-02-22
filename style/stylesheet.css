@@ -160,8 +160,6 @@ input[type=radio] + label {
 
 .stars {
 	display: none;
-	background: url(../img/star_pink.png) left center no-repeat;
-	float: left;
 }
 
 #method { /* ol */
