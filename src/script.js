@@ -72,7 +72,7 @@ $('.ratingForm input').click(function() {
 	$.ajax({
 		method: "GET",
 		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee",
-		sucsess: function(data) {
+		success: function(data) {
 			console.log(JSON.stringify(data));
 			$('#votes').text(data.votes);
 			$('#average').text(data.rating);
