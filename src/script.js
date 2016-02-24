@@ -52,13 +52,13 @@ function vanilla() {
 	document.getElementById("vanilla_pod").innerHTML = portions + " " + text;
 }
 
-$('.ratingForm input').on('change', function() {
-	var userValue;
-	userValue = ($('input[name=rating]:checked', '.ratingForm').val());
-	$('label[for=' + userValue + ']').css('position', "relative");
-	$(':radio:not(:checked)').attr('disabled', true);
-	return userValue;
-});
+//$('.ratingForm input').on('change', function() {
+//	var userValue;
+//	userValue = ($('input[name=rating]:checked', '.ratingForm').val());
+//	$('label[for=' + userValue + ']').css('position', "relative");
+//	$(':radio:not(:checked)').attr('disabled', true);
+//	return userValue;
+//});
 
 $('.ratingForm input').click(function() {
 	console.log("clicked");
