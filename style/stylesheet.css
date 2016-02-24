@@ -15,7 +15,6 @@ body {
 }
 a:active, a:visited, a:link {
 	color: inherit;
-    decoration: none;
     text-decoration: none;
 }
 
@@ -105,7 +104,7 @@ img {
 	margin: 15px 0;
 	padding-left:40px;
 	line-height: 150%;
-	list-style-position: inside:
+	list-style-position: inside;
 }
 
 #main_ol li a:hover, .hover a:hover {
@@ -171,7 +170,6 @@ input[type=radio] + label {
 
 #method { /* ol */
     display: flex;
-    flex-direction: colum;
     align-items: flex-start;
     flex-wrap: wrap;
     counter-reset: item;
