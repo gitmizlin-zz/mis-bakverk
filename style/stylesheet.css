@@ -69,6 +69,7 @@ h2 {
 	font-weight: normal;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin-top: 20px;
 }
 
 h3 {
@@ -111,9 +112,10 @@ img {
 	list-style-position: inside:
 }
 
-#main_ol li a:hover {
+#main_ol li a:hover, .hover a:hover {
     color: pink;
 }
+
 
 figure  {
     border:1px solid lightgrey;

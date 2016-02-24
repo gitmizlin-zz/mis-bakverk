@@ -51,21 +51,14 @@ function vanilla() {
 	}
 	document.getElementById("vanilla_pod").innerHTML = portions + " " + text;
 }
-//$('#getDataButton').click(function() {
-//    // Kod som körs när man klickar på knappen
-//    $.ajax({
-//        method: "GET",
-//        url: "http://opendata-download-metfcst.smhi.se/api/category/pmp1.5g/version/1/geopoint/lat/58.59/lon/16.18/data.json",
-//        success: function(data) {
-//            // JSON.stringify(data) gör om JavaScript objekt till en sträng
-//            // Den första temperaturen på första dagen ges med
-//            // data["timeseries"][0]["t"]
-//            // data.timeseries[0].t
-//            $('#temperature').text(data.timeseries[0].t);
-//
-//
-//        },
-//    });
+
+$('.ratingForm input').on('change', function() {
+	var userValue;
+	userValue = ($('input[name=rating]:checked', '.ratingForm').val());
+	$('label[for=' + userValue + ']').css('position', "relative");
+	$(':radio:not(:checked)').attr('disabled', true);
+	return userValue;
+});
 
 $('.ratingForm input').click(function() {
 	console.log("clicked");
@@ -75,7 +68,7 @@ $('.ratingForm input').click(function() {
 		success: function(data) {
 			console.log(JSON.stringify(data));
 			$('#votes').text(data.votes);
-			$('#average').text(data.rating);
+			$('#average').text(data.rating.toFixed(1));
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
           console.log(textStatus, errorThrown);
@@ -83,16 +76,25 @@ $('.ratingForm input').click(function() {
 	})
 });
 
-$('.ratingForm input').on('change', function() {
-	var userValue;
-	userValue = ($('input[name=rating]:checked', '.ratingForm').val());
-	$('label[for=' + userValue + ']').css('position', "relative");
-	$('label[for=' + userValue + ']').css('top', "2px");
-	$('label[for=' + userValue + ']').css('right', "2px");
-	$(':radio:not(:checked)').attr('disabled', true);
-	$('#myRating').text(userValue);
-	return userValue;
+$('.ratingForm input').click(function() {
+	console.log("clicked");
+	var user_rating = ($('input[name=rating]:checked', '.ratingForm').val());
+	$.ajax({
+		method: "GET",
+		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee&rating=" + user_rating,
+		success: function(data) {
+			console.log(JSON.stringify(data));
+			console.log("status: " + data.status);
+			$('#myRating').text(user_rating);
+            $('label[for=' + user_rating + ']').css('position', "relative");
+            $(':radio:not(:checked)').attr('disabled', true);
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+          console.log(textStatus, errorThrown);
+        }
+	})
 });
+
 
 $('.ratingForm label').hover(function() {
 		var	value = ($('input[name=rating]:hover', '.ratingForm').val());
@@ -100,8 +102,6 @@ $('.ratingForm label').hover(function() {
 		console.log("hovered");
 		var f = $(this).attr("for");
 		$('label[for=' + f + ']').css('position', "relative");
-		$('label[for=' + f + ']').css('bottom', "2px");
-		$('label[for=' + f + ']').css('left', "2px");
 
 		while (i <= value) {
 			$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
