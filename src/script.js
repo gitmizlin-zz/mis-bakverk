@@ -73,7 +73,7 @@ $('.ratingForm input').click(function() {
 		error: function(jqXHR, textStatus, errorThrown) {
           console.log(textStatus, errorThrown);
         }
-	})
+	});
 });
 
 $('.ratingForm input').click(function() {
@@ -92,7 +92,7 @@ $('.ratingForm input').click(function() {
 		error: function(jqXHR, textStatus, errorThrown) {
           console.log(textStatus, errorThrown);
         }
-	})
+	});
 });
 
 
