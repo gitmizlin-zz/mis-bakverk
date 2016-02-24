@@ -1,5 +1,6 @@
 var portions = 0;
 var myPoint = 0;
+var isRated = false;
 
 function changePortion() {
 	portions = document.getElementById("quantity").value;
@@ -52,14 +53,6 @@ function vanilla() {
 	document.getElementById("vanilla_pod").innerHTML = portions + " " + text;
 }
 
-//$('.ratingForm input').on('change', function() {
-//	var userValue;
-//	userValue = ($('input[name=rating]:checked', '.ratingForm').val());
-//	$('label[for=' + userValue + ']').css('position', "relative");
-//	$(':radio:not(:checked)').attr('disabled', true);
-//	return userValue;
-//});
-
 $('.ratingForm input').click(function() {
 	console.log("clicked");
 	$.ajax({
@@ -86,8 +79,8 @@ $('.ratingForm input').click(function() {
 			console.log(JSON.stringify(data));
 			console.log("status: " + data.status);
 			$('#myRating').text(user_rating);
-            $('label[for=' + user_rating + ']').css('position', "relative");
             $(':radio:not(:checked)').attr('disabled', true);
+            isRated = true;
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
           console.log(textStatus, errorThrown);
@@ -95,25 +88,37 @@ $('.ratingForm input').click(function() {
 	});
 });
 
-
 $('.ratingForm label').hover(function() {
+	if (!isRated) {
 		var	value = ($('input[name=rating]:hover', '.ratingForm').val());
 		var i = 0;
 		console.log("hovered");
 		var f = $(this).attr("for");
-		$('label[for=' + f + ']').css('position', "relative");
 
 		while (i <= value) {
 			$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
 			i++;
 		}
-
+	}
 }, function() {
-	$('.ratingForm label').css('backgroundImage', "url('../img/star_grey.png')");
-    console.log("not hovered" + $(this).attr("for"));
-    var f = $(this).attr("for");
-	$('label[for=' + f + ']').css('position', "relative");
-	$('label[for=' + f + ']').css('top', "2px");
-	$('label[for=' + f + ']').css('right', "2px");
+	if (!isRated) {
+		$('.ratingForm label').css('backgroundImage', "url('../img/star_grey.png')");
+		console.log("not hovered" + $(this).attr("for"));
+		var f = $(this).attr("for");
+	}
 });
+
+function CheckBrowser() {
+    if ('localStorage' in window && window['localStorage'] !== null) {
+        // we can use localStorage object to store data
+        console.log("local storage supported");
+        return true;
+    } else {
+     	console.log("local storage not supported");
+        return false;
+    }
+}
+
+
+
 
