@@ -259,5 +259,6 @@ footer li {
 @media (max-width: 500px) {
 	body {
 		background-color: red;
+		font-family: Arial;
 	}
 }
