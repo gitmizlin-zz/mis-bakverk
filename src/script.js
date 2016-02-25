@@ -87,6 +87,9 @@ $('.ratingForm input').click(function() {
 
 $('.ratingForm input').click(function() {
 	myPoint = ($('input[name=rating]:checked', '.ratingForm').val());
+/	$(this).next().slideUp();
+	$(this).next().slideDown();
+	console.log("this element: " + this);
 	$.ajax({
 		method: "GET",
 		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee&rating=" + myPoint,
@@ -109,14 +112,12 @@ $('.ratingForm label').hover(function() {
 		var i = 0;
 				while (i <= value) {
 			$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
-
 			i++;
 		}
 	}
 }, function() {
 	if (!isRated) {
 		$('.ratingForm label').css('backgroundImage', "url('../img/star_grey.png')");
-//		var f = $(this).attr("for");
 	}
 });
 
