@@ -72,7 +72,7 @@ h3 {
 }
 
 nav, footer {
-    border:1px solid #ccc;
+
     border-width:1px 0;
     list-style:none;
     text-align:center;
@@ -85,7 +85,11 @@ nav, footer {
 }
 
 #logos {
-    margin: 0px 50px 0px 200px;
+    margin-left: 100px;
+}
+
+#logos li {
+    height: 100%;
 }
 
 #validators {
@@ -183,7 +187,7 @@ input[type=radio] + label {
 }
 
 .ratingForm span {
-	color: green;
+	color: pink;
 	margin-left: 10px;
 }
 
@@ -236,7 +240,6 @@ input[type=radio] + label {
 
 footer {
     clear: both;
-    padding: 15px;
     color: white;
 }
 
@@ -256,10 +259,16 @@ footer li {
     font-style: normal;
 }
 
-@media (max-width: 50000px) {
+@media (max-width: 500000px) {
 	body {
-		clear: both;
-		padding: 15px;
-		color: red;
+		background: none;
+	}
+
+	header, nav, footer {
+		background-color: #62a5a1;
+	}
+
+	h2, #cb, .ratingForm span  {
+		color: #62a5a1;
 	}
 }
