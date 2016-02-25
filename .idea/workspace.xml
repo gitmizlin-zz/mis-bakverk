@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9786242d-ec0d-4f80-a86a-2448039f0c91" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/facebook.jpg" afterPath="$PROJECT_DIR$/img/facebook.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/instagram.jpg" afterPath="$PROJECT_DIR$/img/instagram.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/stylesheet.css" afterPath="$PROJECT_DIR$/style/stylesheet.css" />
     </list>
@@ -49,8 +47,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.483871">
-              <caret line="70" column="28" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="28" />
+            <state vertical-scroll-proportion="-13.5161295">
+              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,8 +57,8 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5490534">
-              <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.4423408">
+              <caret line="262" column="24" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -520,12 +518,6 @@
       <option name="number" value="Default" />
       <updated>1455106768921</updated>
     </task>
-    <task id="LOCAL-00006" summary="recipe step1 image added">
-      <created>1455180812067</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1455180812067</updated>
-    </task>
     <task id="LOCAL-00007" summary="ingredients added">
       <created>1455192907435</created>
       <option name="number" value="00007" />
@@ -814,7 +806,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456407635713</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="fixing logo size">
+      <created>1456409667254</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1456409667255</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -858,7 +856,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ingredients added" />
     <MESSAGE value="test with gh pages" />
     <MESSAGE value="javascript file created" />
     <MESSAGE value="portion scale added. not working" />
@@ -883,7 +880,8 @@
     <MESSAGE value="slide effect added to stars" />
     <MESSAGE value="loading gif added" />
     <MESSAGE value="working with media queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="working with media queries" />
+    <MESSAGE value="fixing logo size" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing logo size" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1119,14 +1117,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.483871">
-          <caret line="70" column="28" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/recipe.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.034483">
@@ -1143,10 +1133,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.5161295">
+          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/style/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5490534">
-          <caret line="87" column="23" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.4423408">
+          <caret line="262" column="24" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
           <folding />
         </state>
       </provider>
