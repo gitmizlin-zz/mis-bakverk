@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/style/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4423408">
-              <caret line="262" column="20" selection-start-line="262" selection-start-column="20" selection-end-line="262" selection-end-column="20" />
+              <caret line="262" column="21" selection-start-line="262" selection-start-column="21" selection-end-line="262" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -518,12 +518,6 @@
       <option name="number" value="Default" />
       <updated>1455106768921</updated>
     </task>
-    <task id="LOCAL-00010" summary="test with gh pages">
-      <created>1455203728376</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1455203728376</updated>
-    </task>
     <task id="LOCAL-00011" summary="test with gh pages">
       <created>1455527126781</created>
       <option name="number" value="00011" />
@@ -812,7 +806,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456411494571</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="resolution test">
+      <created>1456411783828</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1456411783828</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -856,7 +856,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="working on star-rating" />
     <MESSAGE value="star-rating from the beginning" />
     <MESSAGE value="section to wrap ingredients and figure (photo)" />
     <MESSAGE value="star rating not working" />
@@ -881,7 +880,8 @@
     <MESSAGE value="klart" />
     <MESSAGE value="media queries done" />
     <MESSAGE value="stars not clickable or send data if already rated" />
-    <option name="LAST_COMMIT_MESSAGE" value="stars not clickable or send data if already rated" />
+    <MESSAGE value="resolution test" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolution test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1144,7 +1144,7 @@
     <entry file="file://$PROJECT_DIR$/style/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4423408">
-          <caret line="262" column="20" selection-start-line="262" selection-start-column="20" selection-end-line="262" selection-end-column="20" />
+          <caret line="262" column="21" selection-start-line="262" selection-start-column="21" selection-end-line="262" selection-end-column="21" />
           <folding />
         </state>
       </provider>
