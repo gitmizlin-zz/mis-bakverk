@@ -47,8 +47,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.5161295">
-              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.806452">
+              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/style/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4423408">
-              <caret line="262" column="22" selection-start-line="262" selection-start-column="22" selection-end-line="262" selection-end-column="22" />
+              <caret line="262" column="20" selection-start-line="262" selection-start-column="20" selection-end-line="262" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -87,8 +87,8 @@
         <option value="$PROJECT_DIR$/src/rate.html" />
         <option value="$PROJECT_DIR$/src/jquery-2.2.0.min.js" />
         <option value="$PROJECT_DIR$/src/recipe.html" />
-        <option value="$PROJECT_DIR$/src/script.js" />
         <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/script.js" />
         <option value="$PROJECT_DIR$/style/stylesheet.css" />
       </list>
     </option>
@@ -518,18 +518,6 @@
       <option name="number" value="Default" />
       <updated>1455106768921</updated>
     </task>
-    <task id="LOCAL-00008" summary="ingredients added">
-      <created>1455193001520</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1455193001520</updated>
-    </task>
-    <task id="LOCAL-00009" summary="test with gh pages">
-      <created>1455203427628</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1455203427628</updated>
-    </task>
     <task id="LOCAL-00010" summary="test with gh pages">
       <created>1455203728376</created>
       <option name="number" value="00010" />
@@ -812,7 +800,19 @@
       <option name="project" value="LOCAL" />
       <updated>1456410360725</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="media queries done">
+      <created>1456410455616</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1456410455616</updated>
+    </task>
+    <task id="LOCAL-00058" summary="stars not clickable or send data if already rated">
+      <created>1456411494571</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1456411494571</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -856,8 +856,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="javascript file created" />
-    <MESSAGE value="portion scale added. not working" />
     <MESSAGE value="working on star-rating" />
     <MESSAGE value="star-rating from the beginning" />
     <MESSAGE value="section to wrap ingredients and figure (photo)" />
@@ -881,7 +879,9 @@
     <MESSAGE value="working with media queries" />
     <MESSAGE value="fixing logo size" />
     <MESSAGE value="klart" />
-    <option name="LAST_COMMIT_MESSAGE" value="klart" />
+    <MESSAGE value="media queries done" />
+    <MESSAGE value="stars not clickable or send data if already rated" />
+    <option name="LAST_COMMIT_MESSAGE" value="stars not clickable or send data if already rated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1135,8 +1135,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.5161295">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.806452">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1144,7 +1144,7 @@
     <entry file="file://$PROJECT_DIR$/style/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4423408">
-          <caret line="262" column="22" selection-start-line="262" selection-start-column="22" selection-end-line="262" selection-end-column="22" />
+          <caret line="262" column="20" selection-start-line="262" selection-start-column="20" selection-end-line="262" selection-end-column="20" />
           <folding />
         </state>
       </provider>
