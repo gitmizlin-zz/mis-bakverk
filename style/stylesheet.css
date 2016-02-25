@@ -260,7 +260,7 @@ footer li {
     font-style: normal;
 }
 
-@media (max-width: 50000px) {
+@media (max-width: 500px) {
 	body {
 		background: none;
 	}
