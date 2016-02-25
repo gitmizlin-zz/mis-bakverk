@@ -40,7 +40,7 @@
     </figure>
     <h2>Ingredients</h2>
     <p id="select_a_portion">Select a portion </p>
-    <input id="quantity" type="range" min="1" max="8" step="1" value="4" oninput="changePortion()">
+    <input id="quantity" type="range" min="1" max="8" step="1" onload="displaySlider()" oninput="changePortion()">
     <p id="selectedPortion"></p>
     <ul id="ingredients">
         <li id="egg_yolk"></li>
