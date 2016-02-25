@@ -1,0 +1,10 @@
+References (The pages I got help from)
+
+http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage
+https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+https://jsfiddle.net/leaverou/CGP87/
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+http://api.jquery.com/category/effects/
+http://www.html5tutorial.info/html5-range.php
+https://css-tricks.com/almanac/properties/l/list-style/
+http://www.tutorialspoint.com/jquery/events-hover.htm
