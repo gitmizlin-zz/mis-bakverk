@@ -69,47 +69,47 @@ function vanilla() {
 }
 
 $('.ratingForm input').click(function() {
-	$('#votes').html('<img src="../img/loader.gif">');
-	$('#average').html('<img src="../img/loader.gif">');
-	$.ajax({
-		method: "GET",
-		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee",
-		success: function(data) {
-//			$('#votes').html(data);
-			console.log(JSON.stringify(data));
-			$('#votes').text(data.votes);
-			$('#average').text(data.rating.toFixed(1));
-			setLocalStorage("key2", data.votes);
-			setLocalStorage("key3", data.rating.toFixed(1));
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-          console.log(textStatus, errorThrown);
-        }
-	});
+	if(!isRated) {
+		$('#votes').html('<img src="../img/loader.gif">');
+		$('#average').html('<img src="../img/loader.gif">');
+		$.ajax({
+			method: "GET",
+			url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee",
+			success: function(data) {
+				console.log(JSON.stringify(data));
+				$('#votes').text(data.votes);
+				$('#average').text(data.rating.toFixed(1));
+				setLocalStorage("key2", data.votes);
+				setLocalStorage("key3", data.rating.toFixed(1));
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+			  console.log(textStatus, errorThrown);
+			}
+		});
+	}
 });
 
 $('.ratingForm input').click(function() {
-	myPoint = ($('input[name=rating]:checked', '.ratingForm').val());
-	$(this).next().slideUp();
-	$(this).next().slideDown();
-	console.log("this element: " + this);
-	$.ajax({
-//		$('#votes').append('<img src="../img/loader.gif" id="loader">');
-//		$('#average').append('<img src="../img/loader.gif" id="loader">');
-		method: "GET",
-		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee&rating=" + myPoint,
-		success: function(data) {
-			console.log(JSON.stringify(data));
-			console.log("status: " + data.status);
-			$('#myRating').text(myPoint);
-            $(':radio:not(:checked)').attr('disabled', true);
-            isRated = true;
-//            $('#loader').remove();
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-          console.log(textStatus, errorThrown);
-        }
-	});
+	if(!isRated) {
+		myPoint = ($('input[name=rating]:checked', '.ratingForm').val());
+		$(this).next().slideUp();
+		$(this).next().slideDown();
+		console.log("this element: " + this);
+		$.ajax({
+			method: "GET",
+			url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee&rating=" + myPoint,
+			success: function(data) {
+				console.log(JSON.stringify(data));
+				console.log("status: " + data.status);
+				$('#myRating').text(myPoint);
+				$(':radio:not(:checked)').attr('disabled', true);
+				isRated = true;
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+			  console.log(textStatus, errorThrown);
+			}
+		});
+	}
 });
 
 $('.ratingForm label').hover(function() {
