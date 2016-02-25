@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9786242d-ec0d-4f80-a86a-2448039f0c91" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/stylesheet.css" afterPath="$PROJECT_DIR$/style/stylesheet.css" />
     </list>
     <ignored path="html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -518,12 +517,6 @@
       <option name="number" value="Default" />
       <updated>1455106768921</updated>
     </task>
-    <task id="LOCAL-00002" summary="Rejected commit: Default">
-      <created>1455116622103</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1455116622103</updated>
-    </task>
     <task id="LOCAL-00003" summary="recipe.html added">
       <created>1455179565965</created>
       <option name="number" value="00003" />
@@ -812,7 +805,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456407165434</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="working with media queries">
+      <created>1456407283761</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1456407283761</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
