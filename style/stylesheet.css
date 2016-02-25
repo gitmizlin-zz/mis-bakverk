@@ -256,7 +256,7 @@ footer li {
     font-style: normal;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 50000px) {
 	body {
 		clear: both;
 		padding: 15px;

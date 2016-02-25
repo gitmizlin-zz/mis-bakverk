@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9786242d-ec0d-4f80-a86a-2448039f0c91" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/stylesheet.css" afterPath="$PROJECT_DIR$/style/stylesheet.css" />
     </list>
     <ignored path="html.iws" />
@@ -58,8 +57,8 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7521515">
-              <caret line="262" column="19" selection-start-line="262" selection-start-column="19" selection-end-line="262" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.6282272">
+              <caret line="258" column="22" selection-start-line="258" selection-start-column="22" selection-end-line="258" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -519,12 +518,6 @@
       <option name="number" value="Default" />
       <updated>1455106768921</updated>
     </task>
-    <task id="LOCAL-00004" summary="recipe.html added">
-      <created>1455179654307</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1455179654307</updated>
-    </task>
     <task id="LOCAL-00005" summary="recipe step1 image added">
       <created>1455180770902</created>
       <option name="number" value="00005" />
@@ -813,7 +806,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456407288530</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="working with media queries">
+      <created>1456407613120</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1456407613120</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1144,8 +1143,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7521515">
-          <caret line="262" column="19" selection-start-line="262" selection-start-column="19" selection-end-line="262" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.6282272">
+          <caret line="258" column="22" selection-start-line="258" selection-start-column="22" selection-end-line="258" selection-end-column="22" />
           <folding />
         </state>
       </provider>
