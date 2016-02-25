@@ -256,9 +256,8 @@ footer li {
     font-style: normal;
 }
 
-/*
 @media (max-width: 500px) {
-	.facet_sidebar {
-		display: none;
+	body {
+		background-color: red;
 	}
-}*/
+}
