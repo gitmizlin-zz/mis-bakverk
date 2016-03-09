@@ -1,11 +1,80 @@
 var portions;
 var myPoint = 0;
 
-var votes = $('#votes').text(getLocalStorage("key2"));
-var avr = $('#average').text(getLocalStorage("key3"));
+function displayResults() {
+	$('#votes').html('<img src="../img/loader.gif">');
+	$('#average').html('<img src="../img/loader.gif">');
+	$.ajax({
+		method: "GET",
+		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee",
+		success: function(data) {
+			console.log(JSON.stringify(data));
+			$('#votes').text(data.votes);
+			$('#average').text(data.rating.toFixed(1));
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+		  console.log(textStatus, errorThrown);
+		}
+	});
+}
+window.onload = displayResults();
+
+// vote
+$('.ratingForm input').click(function() {
+	myPoint = ($('input[name=rating]:checked', '.ratingForm').val());
+	$(this).next().slideUp();
+	$(this).next().slideDown();
+	console.log("this element: " + this);
+	$.ajax({
+		method: "GET",
+		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee&rating=" + myPoint,
+		success: function(data) {
+			console.log(JSON.stringify(data));
+			console.log("status: " + data.status);
+			$('#myRating').text(myPoint);
+			displayResults();
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+		  console.log(textStatus, errorThrown);
+		}
+	});
+});
+
+$('.ratingForm label').hover(function() {
+	var	value = ($('input[name=rating]:hover', '.ratingForm').val());
+
+	setActiveStars(value);
+
+}, function() {
+	setActiveStars(myPoint);
+});
+
+function setActiveStars(starCount) {
+	for (var i = 0; i <= 5; i++) {
+		var starFilename = i <= starCount ? 'star_pink.png' : 'star_grey.png';
+		$('label[for=star' + i + ']').css('backgroundImage', 'url("../img/' + starFilename + '")');
+	}
+}
+
+function getLocalStorage(key) {
+	if(typeof(window.localStorage) != 'undefined'){
+		portions = window.localStorage.getItem(key);
+	} else {
+		throw "window.localStorage, not defined";
+	}
+	return portions;
+}
+
+function setLocalStorage(key, value) {
+	if(typeof(window.localStorage) != 'undefined'){
+		window.localStorage.setItem(key, value);
+	}
+	else{
+		throw "window.localStorage, not defined";
+	}
+}
 
 function displayPortion() {
-
 	portions = getLocalStorage("key1");
 	console.log("portions2 : "+ portions);
 	displaySlider();
@@ -68,84 +137,3 @@ function vanilla() {
 	}
 	document.getElementById("vanilla_pod").innerHTML = portions + " " + text;
 }
-
-// get average and total votes and set them to local storage
-$('.ratingForm input').click(function() {
-	$('#votes').html('<img src="../img/loader.gif">');
-	$('#average').html('<img src="../img/loader.gif">');
-	$.ajax({
-		method: "GET",
-		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee",
-		success: function(data) {
-			console.log(JSON.stringify(data));
-			$('#votes').text(data.votes);
-			$('#average').text(data.rating.toFixed(1));
-			setLocalStorage("key2", data.votes);
-			setLocalStorage("key3", data.rating.toFixed(1));
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-		  console.log(textStatus, errorThrown);
-		}
-	});
-});
-
-$('.ratingForm label').hover(function() {
-	var	value = ($('input[name=rating]:hover', '.ratingForm').val());
-
-	setActiveStars(value);
-
-}, function() {
-	setActiveStars(myPoint);
-});
-
-function setActiveStars(starCount) {
-	for (var i = 0; i <= 5; i++) {
-		var starFilename = i <= starCount ? 'star_pink.png' : 'star_grey.png';
-		$('label[for=star' + i + ']').css('backgroundImage', 'url("../img/' + starFilename + '")');
-	}
-}
-
-// vote
-$('.ratingForm input').click(function() {
-	myPoint = ($('input[name=rating]:checked', '.ratingForm').val());
-	$(this).next().slideUp();
-	$(this).next().slideDown();
-	console.log("this element: " + this);
-	$.ajax({
-		method: "GET",
-		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee&rating=" + myPoint,
-		success: function(data) {
-//			$('label[for=star' + myPoint + ']').css('backgroundImage', "url('../img/star_pink.png')");
-
-
-
-			console.log(JSON.stringify(data));
-			console.log("status: " + data.status);
-			$('#myRating').text(myPoint);
-			isRated = true;
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-		  console.log(textStatus, errorThrown);
-		}
-	});
-});
-
-
-function getLocalStorage(key) {
-	if(typeof(window.localStorage) != 'undefined'){
-		portions = window.localStorage.getItem(key);
-	} else {
-		throw "window.localStorage, not defined";
-	}
-	return portions;
-}
-
-function setLocalStorage(key, value) {
-	if(typeof(window.localStorage) != 'undefined'){
-		window.localStorage.setItem(key, value);
-	}
-	else{
-		throw "window.localStorage, not defined";
-	}
-}
-

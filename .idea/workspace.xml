@@ -57,11 +57,13 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.590625">
-              <caret line="103" column="95" selection-start-line="103" selection-start-column="95" selection-end-line="103" selection-end-column="95" />
+            <state vertical-scroll-proportion="0.32512316">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
               <folding>
-                <element signature="e#0#3709#0" expanded="false" />
-                <marker date="1457554214724" expanded="false" signature="771:1479" placeholder="..." />
+                <element signature="e#0#3363#0" expanded="false" />
+                <element signature="e#0#3363#0" expanded="false" />
+                <marker date="1457555990012" expanded="false" signature="2055:2417" placeholder="..." />
+                <marker date="1457555990012" expanded="false" signature="2653:3362" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -489,12 +491,6 @@
       <option name="number" value="Default" />
       <updated>1455106768921</updated>
     </task>
-    <task id="LOCAL-00018" summary="star rating not working">
-      <created>1455882443958</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1455882443958</updated>
-    </task>
     <task id="LOCAL-00019" summary="star rating   working">
       <created>1456122474137</created>
       <option name="number" value="00019" />
@@ -783,7 +779,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457537043882</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="stars working">
+      <created>1457554250624</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1457554250624</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -792,6 +794,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29104477" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -804,7 +807,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29104477" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -827,7 +829,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="star rating   working" />
     <MESSAGE value="allt funkar. rating sparad i variabel" />
     <MESSAGE value="working with ajax" />
     <MESSAGE value="rating get working" />
@@ -852,7 +853,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="java script calling removed from index.html" />
     <MESSAGE value="stars not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="stars not working" />
+    <MESSAGE value="stars working" />
+    <option name="LAST_COMMIT_MESSAGE" value="stars working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -892,8 +894,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3709#0" expanded="false" />
-            <marker date="1457554214724" expanded="false" signature="771:1479" placeholder="..." />
+            <element signature="e#0#3363#0" expanded="false" />
+            <element signature="e#0#3363#0" expanded="false" />
+            <marker date="1457555990012" expanded="false" signature="2055:2417" placeholder="..." />
+            <marker date="1457555990012" expanded="false" signature="2653:3362" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -951,8 +955,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3709#0" expanded="false" />
-            <marker date="1457554214724" expanded="false" signature="771:1479" placeholder="..." />
+            <element signature="e#0#3363#0" expanded="false" />
+            <element signature="e#0#3363#0" expanded="false" />
+            <marker date="1457555990012" expanded="false" signature="2055:2417" placeholder="..." />
+            <marker date="1457555990012" expanded="false" signature="2653:3362" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -983,11 +989,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.590625">
-          <caret line="103" column="95" selection-start-line="103" selection-start-column="95" selection-end-line="103" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.32512316">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
           <folding>
-            <element signature="e#0#3709#0" expanded="false" />
-            <marker date="1457554214724" expanded="false" signature="771:1479" placeholder="..." />
+            <element signature="e#0#3363#0" expanded="false" />
+            <element signature="e#0#3363#0" expanded="false" />
+            <marker date="1457555990012" expanded="false" signature="2055:2417" placeholder="..." />
+            <marker date="1457555990012" expanded="false" signature="2653:3362" placeholder="..." />
           </folding>
         </state>
       </provider>
