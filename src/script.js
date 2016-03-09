@@ -1,13 +1,15 @@
 var portions;
 var myPoint = 0;
-var isRated = false;
 
-$('#votes').text(getLocalStorage("key2"));
-$('#average').text(getLocalStorage("key3"));
-
+var votes = $('#votes').text(getLocalStorage("key2"));
+var avr = $('#average').text(getLocalStorage("key3"));
+	console.log("votes : "+ votes);
+	console.log("average : "+ avr);
 
 function displayPortion() {
+
 	portions = getLocalStorage("key1");
+	console.log("portions2 : "+ portions);
 	displaySlider();
 	var text = "person";
 	if (portions == 1) {
@@ -15,6 +17,7 @@ function displayPortion() {
 	} else {
 		text += "s";
 	}
+	console.log("portions : "+ portions);
 	document.getElementById("selectedPortion").innerHTML = "for " + portions + " " + text;
 
 	eggYolk();
@@ -68,29 +71,28 @@ function vanilla() {
 	document.getElementById("vanilla_pod").innerHTML = portions + " " + text;
 }
 
+// get average and total votes and set them to local storage
 $('.ratingForm input').click(function() {
-	if(!isRated) {
-		$('#votes').html('<img src="../img/loader.gif">');
-		$('#average').html('<img src="../img/loader.gif">');
-		$.ajax({
-			method: "GET",
-			url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee",
-			success: function(data) {
-				console.log(JSON.stringify(data));
-				$('#votes').text(data.votes);
-				$('#average').text(data.rating.toFixed(1));
-				setLocalStorage("key2", data.votes);
-				setLocalStorage("key3", data.rating.toFixed(1));
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-			  console.log(textStatus, errorThrown);
-			}
-		});
-	}
+	$('#votes').html('<img src="../img/loader.gif">');
+	$('#average').html('<img src="../img/loader.gif">');
+	$.ajax({
+		method: "GET",
+		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee",
+		success: function(data) {
+			console.log(JSON.stringify(data));
+			$('#votes').text(data.votes);
+			$('#average').text(data.rating.toFixed(1));
+			setLocalStorage("key2", data.votes);
+			setLocalStorage("key3", data.rating.toFixed(1));
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+		  console.log(textStatus, errorThrown);
+		}
+	});
 });
 
+// vote
 $('.ratingForm input').click(function() {
-	if(!isRated) {
 		myPoint = ($('input[name=rating]:checked', '.ratingForm').val());
 		$(this).next().slideUp();
 		$(this).next().slideDown();
@@ -102,29 +104,22 @@ $('.ratingForm input').click(function() {
 				console.log(JSON.stringify(data));
 				console.log("status: " + data.status);
 				$('#myRating').text(myPoint);
-				$(':radio:not(:checked)').attr('disabled', true);
-				isRated = true;
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 			  console.log(textStatus, errorThrown);
 			}
 		});
-	}
 });
 
 $('.ratingForm label').hover(function() {
-	if (!isRated) {
-		var	value = ($('input[name=rating]:hover', '.ratingForm').val());
-		var i = 0;
-		while (i <= value) {
-			$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
-			i++;
-		}
+	var	value = ($('input[name=rating]:hover', '.ratingForm').val());
+	var i = 0;
+	while (i <= value) {
+		$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
+		i++;
 	}
 }, function() {
-	if (!isRated) {
 		$('.ratingForm label').css('backgroundImage', "url('../img/star_grey.png')");
-	}
 });
 
 function getLocalStorage(key) {
