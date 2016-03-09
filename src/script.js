@@ -145,5 +145,3 @@ function setLocalStorage(key, value) {
 	}
 }
 
-
-
