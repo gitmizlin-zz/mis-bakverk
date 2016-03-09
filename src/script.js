@@ -1,11 +1,8 @@
 var portions;
 var myPoint = 0;
-var isRated = false;
 
 var votes = $('#votes').text(getLocalStorage("key2"));
 var avr = $('#average').text(getLocalStorage("key3"));
-	console.log("votes : "+ votes);
-	console.log("average : "+ avr);
 
 function displayPortion() {
 
@@ -94,15 +91,19 @@ $('.ratingForm input').click(function() {
 
 $('.ratingForm label').hover(function() {
 	var	value = ($('input[name=rating]:hover', '.ratingForm').val());
-	var i = 0;
-	while (i <= value) {
-		$('label[for=star' + i + ']').css('backgroundImage', "url('../img/star_pink.png')");
-		i++;
-	}
+
+	setActiveStars(value);
 
 }, function() {
-		$('.ratingForm label').css('backgroundImage', "url('../img/star_grey.png')");
+	setActiveStars(myPoint);
 });
+
+function setActiveStars(starCount) {
+	for (var i = 0; i <= 5; i++) {
+		var starFilename = i <= starCount ? 'star_pink.png' : 'star_grey.png';
+		$('label[for=star' + i + ']').css('backgroundImage', 'url("../img/' + starFilename + '")');
+	}
+}
 
 // vote
 $('.ratingForm input').click(function() {
@@ -114,7 +115,10 @@ $('.ratingForm input').click(function() {
 		method: "GET",
 		url: "https://edu.oscarb.se/sjk15/api/recipe/?api_key=984d3fec6c2e1f94&recipe=creme_brulee&rating=" + myPoint,
 		success: function(data) {
-			$('label[for=star' + myPoint + ']').css('backgroundImage', "url('../img/star_pink.png')");
+//			$('label[for=star' + myPoint + ']').css('backgroundImage', "url('../img/star_pink.png')");
+
+
+
 			console.log(JSON.stringify(data));
 			console.log("status: " + data.status);
 			$('#myRating').text(myPoint);
