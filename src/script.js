@@ -1,4 +1,4 @@
-var portions;
+var portions = 4;
 var myPoint = 0;
 
 function displayResults() {
