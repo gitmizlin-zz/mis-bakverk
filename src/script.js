@@ -76,7 +76,7 @@ function setLocalStorage(key, value) {
 
 function displayPortion() {
 	portions = getLocalStorage("key1");
-	if (portions == null) {
+	if (!portions) {
 		portions = 4;
 	}
 	console.log("portions2 : "+ portions);
