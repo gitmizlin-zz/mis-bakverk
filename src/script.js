@@ -1,4 +1,4 @@
-var portions = 4;
+var portions;
 var myPoint = 0;
 
 function displayResults() {
@@ -76,6 +76,9 @@ function setLocalStorage(key, value) {
 
 function displayPortion() {
 	portions = getLocalStorage("key1");
+	if (portions == null) {
+		portions = 4;
+	}
 	console.log("portions2 : "+ portions);
 	displaySlider();
 	var text = "person";
