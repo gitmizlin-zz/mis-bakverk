@@ -75,6 +75,15 @@ function setLocalStorage(key, value) {
 	}
 }
 
+function changePortion() {
+	portions = document.getElementById("quantity").value;
+	if (!portions) {
+		portions = 4;
+	}
+	setLocalStorage("key1", portions);
+	displayPortion();
+}
+
 function displayPortion() {
 	portions = getLocalStorage("key1");
 	console.log("portions2 : "+ portions);
@@ -98,15 +107,6 @@ window.onload = displayPortion;
 
 function displaySlider() {
 	$("#quantity").val(portions);
-}
-
-function changePortion() {
-	portions = document.getElementById("quantity").value;
-	if (!portions) {
-		portions = 4;
-	}
-	setLocalStorage("key1", portions);
-	displayPortion();
 }
 
 function eggYolk() {
