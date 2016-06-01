@@ -77,7 +77,7 @@ function setLocalStorage(key, value) {
 
 function changePortion() {
 	portions = document.getElementById("quantity").value;
-	if (!portions) {
+	if (portions == null) {
 		portions = 4;
 	}
 	setLocalStorage("key1", portions);
