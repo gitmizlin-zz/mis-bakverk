@@ -70,15 +70,13 @@ function setLocalStorage(key, value) {
 		window.localStorage.setItem(key, value);
 	}
 	else{
+		console.log("portions is undefined");
 		throw "window.localStorage, not defined";
 	}
 }
 
 function displayPortion() {
 	portions = getLocalStorage("key1");
-	if (!portions) {
-		portions = 4;
-	}
 	console.log("portions2 : "+ portions);
 	displaySlider();
 	var text = "person";
@@ -104,6 +102,9 @@ function displaySlider() {
 
 function changePortion() {
 	portions = document.getElementById("quantity").value;
+	if (!portions) {
+		portions = 4;
+	}
 	setLocalStorage("key1", portions);
 	displayPortion();
 }
