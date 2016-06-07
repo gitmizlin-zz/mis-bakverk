@@ -83,9 +83,14 @@ function changePortion() {
 window.onload = displayPortion;
 function displayPortion() {
 	portions = getLocalStorage("key1");
+
 	console.log("portions2 : "+ portions);
 	displaySlider();
 	var text = "person";
+	
+	if (portions == null) {
+		portions = 4;
+	}
 	if (portions == 1) {
 		text = text;
 	} else {
