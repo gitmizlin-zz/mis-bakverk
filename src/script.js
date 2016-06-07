@@ -113,7 +113,7 @@ function eggYolk() {
 	} else {
 		text += "s";
 	}
-	document.getElementById("egg_yolk").innerHTML = portions + " " + text;
+	document.getElementById("egg_yolk").innerHTML = portions + " nogåt! " + text;
 }
 
 function milk() {
