@@ -80,7 +80,7 @@ function changePortion() {
 	setLocalStorage("key1", portions);
 	displayPortion();
 }
-
+window.onload = displayPortion;
 function displayPortion() {
 	portions = getLocalStorage("key1");
 	console.log("portions2 : "+ portions);
@@ -100,7 +100,7 @@ function displayPortion() {
 	cream();
 	vanilla();
 }
-window.onload = displayPortion;
+
 
 function displaySlider() {
 	$("#quantity").val(portions);
